@@ -1,0 +1,545 @@
+/* ========================================================
+   1. Header Permanente Oscuro (Para Modo Claro y Modo Oscuro)
+   Fondo negro carbón (#13161c) con tipografía e iconos neutros
+   ======================================================== */
+
+.md-header {
+  background-color: #13161c !important;
+  color: #ffffff !important;
+  border-bottom: 1px solid #222733 !important;
+}
+
+/* Textos dentro del header */
+.md-header__title,
+.md-header__topic,
+.md-header__ellipsis,
+.md-header__topic .md-ellipsis,
+.md-header__inner {
+  color: #ffffff !important;
+}
+
+/* Iconos y botones del header (drawer, selector de tema, búsqueda) */
+.md-header__button,
+.md-header__button.md-icon,
+.md-header__button svg,
+.md-header__button label {
+  color: #cbd5e1 !important;
+  fill: #cbd5e1 !important;
+  transition: color 0.15s ease, fill 0.15s ease, background-color 0.15s ease;
+  border-radius: 4px;
+}
+
+/* Hover sobrio y minimalista en header (neutro, sin neón) */
+.md-header__button:hover,
+.md-header__button.md-icon:hover,
+.md-header__button:hover svg {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Enlace al repositorio de GitHub en el header */
+.md-header__source .md-source,
+.md-source__repository,
+.md-source__facts {
+  color: #ffffff !important;
+}
+
+.md-source__icon svg {
+  fill: #ffffff !important;
+}
+
+.md-header__source .md-source:hover .md-source__repository {
+  color: #ffffff !important;
+  text-decoration: underline;
+}
+
+/* Barra de búsqueda integrada en el header */
+.md-search__inner {
+  color: #ffffff !important;
+}
+
+.md-search__input {
+  background-color: #1a1f29 !important;
+  color: #ffffff !important;
+  border: 1px solid #29303e !important;
+}
+
+.md-search__input::placeholder {
+  color: #94a3b8 !important;
+}
+
+.md-search__icon svg {
+  fill: #cbd5e1 !important;
+}
+
+/* Barra de pestañas / navegación superior (tabs) */
+.md-tabs {
+  background-color: #13161c !important;
+  border-bottom: 1px solid #222733 !important;
+}
+
+.md-tabs__link {
+  color: #cbd5e1 !important;
+  opacity: 0.85;
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+
+.md-tabs__link:hover,
+.md-tabs__link--active {
+  color: #ffffff !important;
+  opacity: 1;
+}
+
+/* Ocultar el icono/logo repetido de la izquierda del header */
+.md-header__button.md-logo {
+  display: none !important;
+}
+
+/* ========================================================
+   2. Menús Laterales: Distinción Inequívoca Activo vs Hover
+   Estética Sólida, Mate y Minimalista (Estilo Linear / Vercel / GitHub)
+   ======================================================== */
+
+/* --- TÍTULOS DE SECCIÓN ESTÁTICOS (Ej: "PROYECTOS", "TABLA DE CONTENIDOS") --- 
+   NUNCA deben tener fondo, borde lateral ni comportarse como botones activos */
+.md-nav--primary .md-nav__item--section > .md-nav__link,
+.md-nav--primary .md-nav__item--nested > .md-nav__link,
+.md-nav--primary .md-nav__item--section > label.md-nav__link,
+.md-nav--primary .md-nav__item--nested > label.md-nav__link,
+.md-nav--primary .md-nav__item--section.md-nav__item--active > label.md-nav__link,
+.md-nav--primary .md-nav__item--nested.md-nav__item--active > label.md-nav__link,
+.md-nav--primary .md-nav__title,
+.md-nav--secondary .md-nav__title {
+  font-weight: 700 !important;
+  font-size: 0.64rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  margin-top: 0.8rem !important;
+  margin-bottom: 0.2rem !important;
+  padding: 0.15rem 0 !important;
+  border: none !important;
+  border-left: none !important;
+  background-color: transparent !important;
+  background: none !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  cursor: default !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__item--section > .md-nav__link,
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__item--nested > .md-nav__link,
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__item--section > label.md-nav__link,
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__item--nested > label.md-nav__link,
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__item--section.md-nav__item--active > label.md-nav__link,
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__item--nested.md-nav__item--active > label.md-nav__link,
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__title,
+[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__title {
+  color: #94a3b8 !important;
+}
+
+[data-md-color-scheme="default"] .md-nav--primary .md-nav__item--section > .md-nav__link,
+[data-md-color-scheme="default"] .md-nav--primary .md-nav__item--nested > .md-nav__link,
+[data-md-color-scheme="default"] .md-nav--primary .md-nav__item--section > label.md-nav__link,
+[data-md-color-scheme="default"] .md-nav--primary .md-nav__item--nested > label.md-nav__link,
+[data-md-color-scheme="default"] .md-nav--primary .md-nav__item--section.md-nav__item--active > label.md-nav__link,
+[data-md-color-scheme="default"] .md-nav--primary .md-nav__item--nested.md-nav__item--active > label.md-nav__link,
+[data-md-color-scheme="default"] .md-nav--primary .md-nav__title,
+[data-md-color-scheme="default"] .md-nav--secondary .md-nav__title {
+  color: #475569 !important;
+}
+
+/* --- ENLACES SELECCIONABLES DE PÁGINAS (En menú principal) --- */
+.md-nav--primary .md-nav__list > .md-nav__item > .md-nav__link:not([for="__nav_2"]),
+.md-nav--primary .md-nav__list .md-nav__list .md-nav__link {
+  font-size: 0.68rem !important; /* Más compacto y estilizado */
+  font-weight: 400 !important;
+  line-height: 1.35 !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  padding: 0.24rem 0.45rem 0.24rem 0.55rem !important;
+  margin: 0.08rem 0 !important;
+  border-left: 3px solid transparent !important;
+  border-radius: 4px;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease !important;
+}
+
+/* Modo Oscuro: Estado Normal Inactivo */
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__list > .md-nav__item > .md-nav__link:not([for="__nav_2"]),
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__list .md-nav__list .md-nav__link {
+  color: #94a3b8;
+  background-color: transparent;
+}
+
+/* Modo Claro: Estado Normal Inactivo */
+[data-md-color-scheme="default"] .md-nav--primary .md-nav__list > .md-nav__item > .md-nav__link:not([for="__nav_2"]),
+[data-md-color-scheme="default"] .md-nav--primary .md-nav__list .md-nav__list .md-nav__link {
+  color: #475569;
+  background-color: transparent;
+}
+
+/* === HOVER (Donde paso el cursor - Enlaces NO activos) === */
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__list > .md-nav__item > .md-nav__link:hover:not(.md-nav__link--active):not([for="__nav_2"]),
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__list .md-nav__list .md-nav__link:hover:not(.md-nav__link--active) {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  border-left: 3px solid transparent !important;
+  font-weight: 400 !important;
+}
+
+[data-md-color-scheme="default"] .md-nav--primary .md-nav__list > .md-nav__item > .md-nav__link:hover:not(.md-nav__link--active):not([for="__nav_2"]),
+[data-md-color-scheme="default"] .md-nav--primary .md-nav__list .md-nav__list .md-nav__link:hover:not(.md-nav__link--active) {
+  color: #0f172a !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  border-left: 3px solid transparent !important;
+  font-weight: 400 !important;
+}
+
+/* === ACTIVO (Donde estoy parado - Barra sólida a la izquierda + fondo slate + texto blanco) === */
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__link--active {
+  color: #ffffff !important;
+  background-color: #1e2430 !important;
+  border-left: 3px solid #14b8a6 !important;
+  border-radius: 0 4px 4px 0 !important;
+  font-weight: 600 !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__link--active:hover {
+  background-color: #262e3e !important;
+  color: #ffffff !important;
+  border-left: 3px solid #14b8a6 !important;
+}
+
+[data-md-color-scheme="default"] .md-nav--primary .md-nav__link--active {
+  color: #0f172a !important;
+  background-color: #edebe5 !important;
+  border-left: 3px solid #0d9488 !important;
+  border-radius: 0 4px 4px 0 !important;
+  font-weight: 600 !important;
+}
+
+[data-md-color-scheme="default"] .md-nav--primary .md-nav__link--active:hover {
+  background-color: #e4e2db !important;
+  color: #0f172a !important;
+  border-left: 3px solid #0d9488 !important;
+}
+
+
+/* --- TABLA DE CONTENIDOS (Secondary Navigation) --- */
+
+/* Títulos Principales en la Tabla de Contenidos (H2) */
+.md-nav--secondary > ul > .md-nav__item > .md-nav__link {
+  font-size: 0.68rem !important; /* Más compacto */
+  font-weight: 500 !important;
+  line-height: 1.35 !important;
+  padding: 0.2rem 0.4rem !important;
+  margin: 0.1rem 0 !important;
+  border-radius: 4px;
+  transition: color 0.15s ease, background-color 0.15s ease !important;
+}
+
+/* Subtítulos en la Tabla de Contenidos (H3 - como en Competencias de Dominio Aplicadas) */
+.md-nav--secondary .md-nav__list .md-nav__list {
+  padding-left: 0.65rem !important;
+  margin: 0.05rem 0 0.2rem 0 !important;
+  border-left: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.md-nav--secondary .md-nav__list .md-nav__list .md-nav__item {
+  margin: 0.05rem 0 !important;
+}
+
+.md-nav--secondary .md-nav__list .md-nav__list .md-nav__link {
+  font-size: 0.63rem !important; /* Ligeramente más compacto */
+  font-weight: 400 !important;
+  line-height: 1.3 !important;
+  padding: 0.14rem 0.35rem !important;
+  margin: 0.02rem 0 !important;
+  border-radius: 3px;
+  transition: color 0.15s ease, background-color 0.15s ease !important;
+}
+
+/* Modo Oscuro: Colores H2 y H3 */
+[data-md-color-scheme="slate"] .md-nav--secondary > ul > .md-nav__item > .md-nav__link {
+  color: #94a3b8 !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav--secondary > ul > .md-nav__item > .md-nav__link:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav--secondary > ul > .md-nav__item > .md-nav__link--active {
+  color: #14b8a6 !important;
+  font-weight: 600 !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__list .md-nav__list .md-nav__link {
+  color: #718096 !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__list .md-nav__list .md-nav__link:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__list .md-nav__list .md-nav__link--active {
+  color: #14b8a6 !important;
+  font-weight: 600 !important;
+}
+
+/* Modo Claro: Colores H2 y H3 */
+[data-md-color-scheme="default"] .md-nav--secondary > ul > .md-nav__item > .md-nav__link {
+  color: #475569 !important;
+}
+
+[data-md-color-scheme="default"] .md-nav--secondary > ul > .md-nav__item > .md-nav__link:hover {
+  color: #0f172a !important;
+  background-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-md-color-scheme="default"] .md-nav--secondary > ul > .md-nav__item > .md-nav__link--active {
+  color: #0d9488 !important;
+  font-weight: 600 !important;
+}
+
+[data-md-color-scheme="default"] .md-nav--secondary .md-nav__list .md-nav__list .md-nav__link {
+  color: #64748b !important;
+}
+
+[data-md-color-scheme="default"] .md-nav--secondary .md-nav__list .md-nav__list .md-nav__link:hover {
+  color: #0f172a !important;
+  background-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-md-color-scheme="default"] .md-nav--secondary .md-nav__list .md-nav__list .md-nav__link--active {
+  color: #0d9488 !important;
+  font-weight: 600 !important;
+}
+
+
+/* ========================================================
+   3. Bloque de Introducción (Blockquote): Dimensiones y Estructura Sólida
+   ======================================================== */
+
+.md-typeset blockquote {
+  margin: 0.75rem 0 0.5rem 0 !important;
+  padding: 0.55rem 0.85rem !important;
+  border-left-width: 3.5px !important;
+  border-left-style: solid !important;
+  border-radius: 4px !important;
+}
+
+.md-typeset blockquote > p {
+  margin: 0 !important;
+  line-height: 1.5 !important;
+  font-size: 0.84rem !important;
+}
+
+
+/* ========================================================
+   4. Botón de Curriculum Vitae: Sólido, Mate y Minimalista
+   ======================================================== */
+
+.cv-btn-container {
+  margin: 0.5rem 0 1.25rem 0 !important;
+}
+
+.cv-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 0.74rem !important;
+  font-weight: 500 !important;
+  padding: 0.32rem 0.8rem !important;
+  border-radius: 4px !important;
+  text-decoration: none !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.01em !important;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease !important;
+}
+
+/* Modo Oscuro: Botón Sólido Slate */
+[data-md-color-scheme="slate"] .cv-btn {
+  background-color: #1e2430 !important;
+  color: #e2e8f0 !important;
+  border: 1px solid #2d3648 !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+[data-md-color-scheme="slate"] .cv-btn:hover {
+  background-color: #283040 !important;
+  color: #ffffff !important;
+  border-color: #3e4a62 !important;
+}
+
+/* Modo Claro: Botón Sólido Limpio */
+[data-md-color-scheme="default"] .cv-btn {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+  border: 1px solid #cbd5e1 !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-md-color-scheme="default"] .cv-btn:hover {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+  border-color: #94a3b8 !important;
+}
+
+
+/* ========================================================
+   5. Modo Claro: Blanco Hueso Mate y Tipografía Nítida
+   ======================================================== */
+
+[data-md-color-scheme="default"] {
+  /* Fondo principal blanco hueso cálido (descansa la vista) */
+  --md-default-bg-color: #f7f6f2;
+  --md-default-bg-color--light: #ffffff;
+  --md-default-bg-color--lighter: #edebe5;
+  --md-default-bg-color--lightest: #e2e0d8;
+
+  /* Tipografía oscura y nítida */
+  --md-default-fg-color: #1e293b;
+  --md-default-fg-color--light: #334155;
+  --md-default-fg-color--lighter: #475569;
+  --md-default-fg-color--lightest: #64748b;
+
+  /* Enlaces y acentos en verde azulado técnico y sobrio */
+  --md-typeset-color: #1e293b;
+  --md-typeset-a-color: #0d9488;
+  --md-accent-fg-color: #0d9488;
+
+  /* Bloques de código */
+  --md-code-bg-color: #edebe5;
+  --md-code-fg-color: #0f172a;
+}
+
+/* Citas en modo claro */
+[data-md-color-scheme="default"] .md-typeset blockquote {
+  color: #334155 !important;
+  background-color: #edebe5 !important;
+  border-left-color: #0d9488 !important;
+}
+
+[data-md-color-scheme="default"] .md-typeset blockquote strong {
+  color: #0f172a !important;
+}
+
+/* Títulos en modo claro */
+[data-md-color-scheme="default"] .md-typeset h1,
+[data-md-color-scheme="default"] .md-typeset h2,
+[data-md-color-scheme="default"] .md-typeset h3,
+[data-md-color-scheme="default"] .md-typeset h4 {
+  color: #0f172a !important;
+  font-weight: 700;
+}
+
+/* Enlaces del contenido en modo claro */
+[data-md-color-scheme="default"] .md-typeset a {
+  color: #0d9488 !important;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+[data-md-color-scheme="default"] .md-typeset a:hover {
+  color: #0f766e !important;
+  text-decoration: underline;
+}
+
+/* Tablas en modo claro */
+[data-md-color-scheme="default"] .md-typeset table:not([class]) {
+  background-color: #ffffff;
+  border: 1px solid #e2e0d8;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+[data-md-color-scheme="default"] .md-typeset table:not([class]) th {
+  background-color: #edebe5;
+  color: #0f172a !important;
+  font-weight: 700;
+  border-bottom: 2px solid #e2e0d8;
+}
+
+[data-md-color-scheme="default"] .md-typeset table:not([class]) td {
+  color: #1e293b !important;
+  border-top: 1px solid #e2e0d8;
+}
+
+
+/* ========================================================
+   6. Modo Oscuro: Sólido, Mate y Sin Neón
+   ======================================================== */
+
+[data-md-color-scheme="slate"] {
+  /* Fondo principal negro carbón/slate mate */
+  --md-default-bg-color: #12151c;
+  --md-default-bg-color--light: #181c24;
+  --md-default-bg-color--lighter: #202632;
+  --md-default-bg-color--lightest: #29303e;
+
+  /* Tipografía nítida y descansada */
+  --md-default-fg-color: #e2e8f0;
+  --md-default-fg-color--light: #cbd5e1;
+  --md-default-fg-color--lighter: #94a3b8;
+  --md-default-fg-color--lightest: #64748b;
+
+  /* Acento sólido mate (Teal 500 sólido, sin brillo fluorescente) */
+  --md-typeset-color: #e2e8f0;
+  --md-typeset-a-color: #14b8a6;
+  --md-accent-fg-color: #14b8a6;
+
+  /* Bloques de código */
+  --md-code-bg-color: #181c24;
+  --md-code-fg-color: #f1f5f9;
+}
+
+/* Citas en modo oscuro */
+[data-md-color-scheme="slate"] .md-typeset blockquote {
+  color: #cbd5e1 !important;
+  background-color: #181c24 !important;
+  border-left-color: #0d9488 !important;
+}
+
+[data-md-color-scheme="slate"] .md-typeset h1,
+[data-md-color-scheme="slate"] .md-typeset h2,
+[data-md-color-scheme="slate"] .md-typeset h3,
+[data-md-color-scheme="slate"] .md-typeset h4 {
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+/* Enlaces del contenido en modo oscuro: Sólidos con subrayado al hover */
+[data-md-color-scheme="slate"] .md-typeset a {
+  color: #14b8a6 !important;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+[data-md-color-scheme="slate"] .md-typeset a:hover {
+  color: #2dd4bf !important;
+  text-decoration: underline;
+}
+
+/* Tablas en modo oscuro */
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) {
+  background-color: #181c24;
+  border: 1px solid #222733;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
+  background-color: #13161c;
+  color: #ffffff !important;
+  font-weight: 700;
+  border-bottom: 1px solid #222733;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
+  color: #e2e8f0 !important;
+  border-top: 1px solid #222733;
+}

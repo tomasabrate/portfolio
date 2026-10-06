@@ -1,0 +1,68 @@
+site_name: Tomas Abrate | Portfolio
+site_description: Portafolio técnico y casos de estudio de ingeniería de Tomás Abrate.
+site_author: Tomas Abrate
+site_url: https://tomasabrate.github.io/portfolio/
+
+repo_name: tomasabrate/portfolio
+repo_url: https://github.com/tomasabrate/portfolio
+
+theme:
+  name: material
+  language: es
+  palette:
+    - scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo claro
+    - scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo oscuro
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - content.code.copy
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - admonition
+  - pymdownx.details
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - "Resumen & Perfil": index.md
+  - "Proyectos":
+      - "Ojo Ciudadano (Gestión de Emergencias)": ojociudadano-sistema-emergencias.md
+      - "Bites (Marketplace Transaccional)": bites-marketplace.md
+      - "Smart Grid (Data Analytics & IoT)": smartgrid-data-analytics.md
+      - "TS Desarrollos (Arquitectura Backend & Cloud)": ts-desarrollos-web.md
+      - "Recuperación de Imágenes (Búsqueda CBIR & LLM)": recuperacion-imagenes-cbir.md
