@@ -1,0 +1,990 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Portafolio técnico y casos de estudio de ingeniería de Tomás Abrate.">
+      
+      
+        <meta name="author" content="Tomas Abrate">
+      
+      
+        <link rel="canonical" href="https://tomasabrate.github.io/portfolio/ts-desarrollos-web/">
+      
+      
+        <link rel="prev" href="../smartgrid-data-analytics/">
+      
+      
+        <link rel="next" href="../recuperacion-imagenes-cbir/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>TS Desarrollos (Arquitectura Backend & Cloud) - Tomas Abrate | Portfolio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ts-desarrollos-caso-de-estudio-de-ingenieria" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Tomas Abrate | Portfolio" class="md-header__button md-logo" aria-label="Tomas Abrate | Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tomas Abrate | Portfolio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              TS Desarrollos (Arquitectura Backend & Cloud)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/tomasabrate/portfolio" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tomasabrate/portfolio
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Tomas Abrate | Portfolio" class="md-nav__button md-logo" aria-label="Tomas Abrate | Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Tomas Abrate | Portfolio
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/tomasabrate/portfolio" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tomasabrate/portfolio
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resumen & Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyectos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyectos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ojociudadano-sistema-emergencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ojo Ciudadano (Gestión de Emergencias)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bites-marketplace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bites (Marketplace Transaccional)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smartgrid-data-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Smart Grid (Data Analytics & IoT)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TS Desarrollos (Arquitectura Backend & Cloud)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TS Desarrollos (Arquitectura Backend & Cloud)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#funcionalidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitectura-y-flujo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitectura y Flujo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#persistencia-y-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Persistencia y Datos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend-y-logica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend y Lógica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integracion-y-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integración y API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alcance-y-decisiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alcance y Decisiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejecucion-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejecución Local
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recuperacion-imagenes-cbir/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recuperación de Imágenes (Búsqueda CBIR & LLM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#funcionalidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitectura-y-flujo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitectura y Flujo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#persistencia-y-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Persistencia y Datos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend-y-logica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend y Lógica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integracion-y-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integración y API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alcance-y-decisiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alcance y Decisiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejecucion-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejecución Local
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="ts-desarrollos-caso-de-estudio-de-ingenieria">TS Desarrollos — Caso de Estudio de Ingeniería<a class="headerlink" href="#ts-desarrollos-caso-de-estudio-de-ingenieria" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Plataforma web para publicar servicios y convertir consultas comerciales en solicitudes persistentes y gestionables. El backend centraliza validación, estados y exportación operativa, reduciendo el acoplamiento entre el sitio público y la gestión interna.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Ficha Técnica</th>
+<th style="text-align: left;">Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Stack de Persistencia</strong></td>
+<td style="text-align: left;">PostgreSQL, Sequelize ORM, <code>sequelize.sync()</code> para materialización del esquema, SQL generado y registrado</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Stack de Backend</strong></td>
+<td style="text-align: left;">JavaScript ES Modules, Node.js 20 Alpine, Express, CORS, <code>dotenv</code>, middleware de logging</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Stack de Consumo (Front)</strong></td>
+<td style="text-align: left;">React 19, Vite, Axios y Fetch API, React Router</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Repositorio / Código</strong></td>
+<td style="text-align: left;"><a href="https://github.com/ts-desarrollos/ts-web">ts-desarrollos/ts-web</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="funcionalidades">Funcionalidades<a class="headerlink" href="#funcionalidades" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Catálogo de servicios:</strong> publicación dinámica de servicios técnicos organizados por categorías, descripción técnica y precios base con soporte para valores a cotizar.</li>
+<li><strong>Captura y trazabilidad de solicitudes:</strong> formulario de contacto que convierte consultas web en registros persistentes en base de datos relacional con trazabilidad temporal.</li>
+<li><strong>Gestión operativa y estados:</strong> panel administrativo para revisar requerimientos, contabilizar consultas pendientes (<code>Pendiente</code>) y actualizar ciclo de atención (<code>Resuelto</code>).</li>
+<li><strong>Exportación de datos:</strong> generación y descarga en caliente de reportes tabulares en formato CSV normalizado para análisis y seguimiento operativo.</li>
+</ul>
+<h2 id="arquitectura-y-flujo">Arquitectura y Flujo<a class="headerlink" href="#arquitectura-y-flujo" title="Permanent link">&para;</a></h2>
+<p>TS Desarrollos necesitaba una presencia web que no solo mostrara su catálogo, sino que capturara consultas de clientes, conservara su trazabilidad y permitiera resolverlas desde un panel administrativo. La solución separa el catálogo (<code>servicios</code>) del flujo de atención (<code>solicitudes</code>), con persistencia relacional y estados de negocio.</p>
+<p>El backend se desplegó en un servidor Ubuntu de Oracle Cloud dentro de Docker. El sitio cliente se publicó mediante Cloudflare y se configura para consumir la URL de la API con <code>VITE_API_URL</code>; el backend restringe CORS mediante <code>FRONTEND_URL</code> y permite el origen local de desarrollo.</p>
+<pre class="mermaid"><code>graph TD
+    A[Cliente web React/Vite&lt;br/&gt;Cloudflare] --&gt;|GET servicios / POST solicitud| B[Express API&lt;br/&gt;Node.js 20]
+    B --&gt; C[CORS, JSON/urlencoded y logger]
+    C --&gt; D[Rutas HTTP]
+    D --&gt; E[Servicios de negocio]
+    E --&gt; F[Repositorios Sequelize]
+    F --&gt; G[(PostgreSQL)]
+    D --&gt; H[Panel administrativo]
+    H --&gt;|PUT estado / exportación CSV| E
+    G --&gt;|JSON serializado| B
+    B --&gt; A
+    I[Docker en Ubuntu / Oracle Cloud] -. aloja .-&gt; B</code></pre>
+<h2 id="persistencia-y-datos">Persistencia y Datos<a class="headerlink" href="#persistencia-y-datos" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>Paradigma y motor:</strong> PostgreSQL se utiliza como motor relacional transaccional y Sequelize como ORM. Es adecuado para el volumen y la naturaleza del sistema: altas de solicitudes, actualización de estados, consulta ordenada por fecha y lectura del catálogo. La conexión usa <code>DATABASE_URL</code> y SSL (<code>rejectUnauthorized: false</code>) para el entorno gestionado.</p>
+</li>
+<li>
+<p><strong>Esquema central:</strong></p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Tabla</th>
+<th style="text-align: left;">Atributos relevantes</th>
+<th style="text-align: left;">Integridad y uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>servicios</code></td>
+<td style="text-align: left;"><code>id</code> autoincremental, <code>nombre</code>, <code>categoria</code>, <code>descripcion</code>, <code>precio_base</code>, <code>tips</code>, <code>orden</code>, <code>createdAt</code>, <code>updatedAt</code></td>
+<td style="text-align: left;"><code>id</code> es PK; <code>nombre</code> y <code>categoria</code> son obligatorios. <code>precio_base</code> es entero y nullable para representar “A consultar”.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>solicitudes</code></td>
+<td style="text-align: left;"><code>id</code> autoincremental, <code>cliente_nombre</code>, <code>cliente_email</code>, <code>cliente_telefono</code>, <code>mensaje</code>, <code>estado</code>, <code>createdAt</code>, <code>updatedAt</code></td>
+<td style="text-align: left;"><code>id</code> es PK; nombre, correo y mensaje son obligatorios; teléfono es opcional; <code>estado</code> inicia en <code>Pendiente</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>La cardinalidad actual es independiente: una solicitud no guarda una FK a <code>servicios</code>, porque el mensaje conserva el detalle enviado por el cliente y puede referir una consulta general. Los timestamps automáticos permiten ordenar y auditar el ciclo de atención, aunque no constituyen una serie temporal de sensores ni métricas acumuladas.</p>
+<ul>
+<li><strong>Acceso e integridad:</strong> los modelos se registran al iniciar la aplicación y <code>authenticate()</code> verifica la conectividad antes de <code>sequelize.sync()</code>. El repositorio de solicitudes ordena por <code>createdAt DESC</code>, y las operaciones de actualización usan <code>findByPk</code> seguido de <code>save()</code>. El repositorio de servicios encapsula listado, búsqueda por ID y creación.</li>
+</ul>
+<p>El código no contiene una carpeta de migraciones, índices secundarios, constraints únicos, FKs ni transacciones explícitas. En consecuencia, <code>sync()</code> simplifica el despliegue inicial, pero para evolución controlada del esquema convendría migrar a Sequelize CLI/migrations y agregar índices sobre <code>solicitudes.estado</code> y <code>createdAt</code> si crece la carga administrativa. La base mantiene consistencia por registro mediante PK, <code>allowNull</code> y timestamps; la consistencia de cambios multioperación no está modelada porque cada caso de uso actual ejecuta una única operación de escritura.</p>
+<h2 id="backend-y-logica">Backend y Lógica<a class="headerlink" href="#backend-y-logica" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>Estructura del servidor:</strong> <code>app.js</code> compone configuración, CORS, parseo de payloads, logging, routers y arranque de base de datos. Las rutas HTTP delegan en servicios; los servicios aplican reglas mínimas de negocio; los repositorios concentran el acceso Sequelize; y los modelos describen el esquema. Esta separación permite cambiar la persistencia sin trasladar consultas a los controladores.</p>
+</li>
+<li>
+<p><strong>Procesamiento y validación:</strong> <code>POST /api/servicios</code> exige <code>nombre</code> y <code>categoria</code>. <code>POST /api/solicitudes</code> exige <code>cliente_nombre</code>, <code>cliente_email</code> y <code>mensaje</code>; el teléfono es opcional. <code>PUT /api/solicitudes/:id</code> exige un estado y verifica que exista la solicitud antes de guardarla. Express transforma JSON y formularios URL-encoded; Sequelize serializa los atributos a SQL parametrizado.</p>
+</li>
+</ul>
+<p>La validación es de presencia, no existe un DTO/schema formal ni validación de formato de correo, longitud, catálogo cerrado de estados o sanitización específica de CSV. Las rutas convierten errores de validación en <code>400</code>, errores de consulta en <code>500</code>, creaciones en <code>201</code> y respuestas exitosas en <code>200</code>. El middleware registra fecha, método y URL; Sequelize dispone además de un logger SQL formateado configurable.</p>
+<ul>
+<li><strong>Rendimiento y estados:</strong> el catálogo se consulta completo y las solicitudes se consultan completas, ordenadas por fecha. El endpoint de notificaciones ejecuta un <code>COUNT</code> de solicitudes pendientes y el panel permite pasar una solicitud de <code>Pendiente</code> a <code>Resuelto</code>. No hay paginación, filtros avanzados, caché ni control optimista de concurrencia; por el tamaño operativo esperado, la solución prioriza simplicidad y trazabilidad. La exportación genera CSV en memoria y normaliza saltos de línea del mensaje para no romper filas.</li>
+</ul>
+<h2 id="integracion-y-api">Integración y API<a class="headerlink" href="#integracion-y-api" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Endpoint</th>
+<th style="text-align: left;">Contrato funcional</th>
+<th style="text-align: left;">Respuestas observables</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>GET /api/servicios</code></td>
+<td style="text-align: left;">Lista JSON de servicios; devuelve <code>{ mensaje }</code> si está vacío</td>
+<td style="text-align: left;"><code>200</code>, <code>500</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>POST /api/servicios</code></td>
+<td style="text-align: left;">Recibe JSON con <code>nombre</code>, <code>categoria</code> y campos opcionales</td>
+<td style="text-align: left;"><code>201</code> con entidad, <code>400</code> por validación</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>GET /api/solicitudes</code></td>
+<td style="text-align: left;">Lista JSON ordenada por <code>createdAt</code> descendente</td>
+<td style="text-align: left;"><code>200</code>, <code>500</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>POST /api/solicitudes</code></td>
+<td style="text-align: left;">Recibe nombre, email, teléfono opcional y mensaje</td>
+<td style="text-align: left;"><code>201</code> con <code>{ mensaje, data }</code>, <code>400</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PUT /api/solicitudes/:id</code></td>
+<td style="text-align: left;">Recibe <code>{ "estado": "Resuelto" }</code></td>
+<td style="text-align: left;"><code>200</code> con entidad, <code>400</code> si falta estado o no existe</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>GET /api/solicitudes/admin/notificaciones</code></td>
+<td style="text-align: left;">Devuelve <code>{ "nuevas": number }</code> para pendientes</td>
+<td style="text-align: left;"><code>200</code>, <code>500</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>GET /api/solicitudes/admin/exportar</code></td>
+<td style="text-align: left;">Descarga <code>Solicitudes_TSDesarrollos.csv</code></td>
+<td style="text-align: left;"><code>text/csv</code>, <code>500</code></td>
+</tr>
+</tbody>
+</table>
+<p>El cliente encapsula el catálogo y el envío mediante Axios, y utiliza <code>fetch</code> para el formulario y el panel administrativo. Las respuestas JSON se convierten directamente en estado React para mostrar servicios, confirmaciones y la tabla de solicitudes; el CSV se abre como descarga del navegador. La URL base se parametriza por entorno, manteniendo el mismo contrato entre desarrollo local y despliegue.</p>
+<h2 id="alcance-y-decisiones">Alcance y Decisiones<a class="headerlink" href="#alcance-y-decisiones" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>Módulos bajo mi autoría:</strong> participé en el diseño y refactorización del modelo relacional de <code>servicios</code> y <code>solicitudes</code>, incluyendo campos de negocio, timestamps y transición de estados. Implementé colaborativamente la capa de modelos Sequelize, repositorios de acceso, servicios de validación y rutas REST para altas, consultas, actualización de estados, contador de pendientes y exportación operativa.</p>
+</li>
+<li>
+<p><strong>Diseño de flujo de datos:</strong> contribuí a mover el catálogo desde datos embebidos en el frontend hacia persistencia en base de datos, dejando al cliente como consumidor del API. También participé en el contrato de configuración por entorno (<code>DATABASE_URL</code>, <code>FRONTEND_URL</code>, <code>VITE_API_URL</code>) y en la integración CORS.</p>
+</li>
+<li>
+<p><strong>Despliegue y operación:</strong> colaboré en la contenerización del backend con Node 20 Alpine, <code>npm ci --omit=dev</code> y arranque reproducible mediante Docker. El proceso operativo documentado actualiza el código en Ubuntu/Oracle Cloud y reconstruye el servicio con <code>docker compose up -d --build</code>; el frontend se entrega a través de Cloudflare.</p>
+</li>
+<li>
+<p><strong>Decisiones técnicas y trade-offs:</strong> se eligió Sequelize para mantener modelos y consultas expresivos sin acoplar las rutas a SQL manual. La separación servicio/repositorio facilita pruebas y evolución, mientras que <code>sync()</code> reduce fricción en una primera puesta en producción, a costa de no ofrecer versionado formal del esquema. Se mantuvo <code>precio_base</code> nullable para representar servicios cotizados caso a caso y se conservaron timestamps para ordenar y operar solicitudes sin introducir una tabla de historial adicional. Para una siguiente etapa, priorizaría migraciones, DTOs con validación estructural, estados restringidos, autenticación real del panel, paginación e índices selectivos.</p>
+</li>
+</ul>
+<h2 id="ejecucion-local">Ejecución Local<a class="headerlink" href="#ejecucion-local" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Clonar repositorio:</strong>
+   <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ts-desarrollos/ts-web.git
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>ts-web
+</span></code></pre></div></p>
+</li>
+<li>
+<p><strong>Levantar backend (Node.js &amp; Express):</strong>
+   <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>backend
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>npm<span class="w"> </span>install
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># Configurar variables en .env (DATABASE_URL, PORT=3000, FRONTEND_URL=http://localhost:5173)</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>npm<span class="w"> </span>run<span class="w"> </span>dev
+</span></code></pre></div></p>
+</li>
+<li>
+<p><strong>Levantar frontend (React &amp; Vite):</strong>
+   <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">cd</span><span class="w"> </span>../frontend
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>npm<span class="w"> </span>install
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># Configurar .env con VITE_API_URL=http://localhost:3000</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>npm<span class="w"> </span>run<span class="w"> </span>dev
+</span></code></pre></div></p>
+</li>
+<li>
+<p><strong>Despliegue con Docker Compose (Alternativa):</strong>
+   <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
+</span></code></pre></div></p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
